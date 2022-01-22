@@ -7,5 +7,28 @@
 .movie_card_img {
     max-width: 80%;
     height: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    
 }
+
+.movie_card_name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.movie_card_type,
+.movie_card_year,
+.movie_card_actors {
+    color: #81a2b8;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.movie_card_type {
+    font-weight: 600 !important;
+    color: #ffb10a;
+}
+
+
 

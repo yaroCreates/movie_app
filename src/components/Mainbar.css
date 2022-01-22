@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    background-color: aquamarine;
+    background-color: #222b31;
+    padding: 60px;
 }
 
