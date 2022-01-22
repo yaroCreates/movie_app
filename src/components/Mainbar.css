@@ -1,9 +1,20 @@
-.movie {
+.mainbar {
+
     width: 85%;
+}
+.movie {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     background-color: #222b31;
     padding: 60px;
 }
+
+.mainbar_header {
+    height: 5vh;
+    background-color: #ff424f;
+    position: sticky;
+    top: 0;
+}
+
 
