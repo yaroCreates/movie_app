@@ -5,7 +5,9 @@ function Sidebar() {
 
     return (
         <div className='sidebar'>
-            <h1>Sidebar</h1>
+            <div className='sidebar_header'>
+                <h1 className='sidebar_logo'>MovieApp</h1>
+            </div>
         </div>
 
     )
