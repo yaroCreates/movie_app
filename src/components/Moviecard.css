@@ -1,0 +1,11 @@
+.movie_card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie_card_img {
+    max-width: 80%;
+    height: 300px;
+}
+

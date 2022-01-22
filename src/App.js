@@ -1,6 +1,7 @@
 import react, { useEffect, useState } from 'react';
 import './App.css';
-import Movie from './components/Movie';
+import Mainbar from './components/Mainbar';
+import Sidebar from './components/Sidebar';
 
 
 function App() {
@@ -25,19 +26,10 @@ function App() {
 
   console.log(movies)
   return (
-    <div className="App">
-      {movies.map((item) => 
-          <Movie
-            key={item.id}
-            id={item.id}
-            title={item.l}
-            type={item.q}
-            rating={item.rank}
-            image={item.i.imageUrl}
-            year={item.yr}
-            actor={item.s}
-          />
-        )}
+    <div className="container">
+      <Sidebar />
+      <Mainbar items = {movies}/>
+
     </div>
   );
 }
