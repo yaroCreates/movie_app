@@ -17,4 +17,34 @@
     top: 0;
 }
 
+.mainbar_search {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.mainbar_search_icon {
+    position: absolute;
+    opacity: 0.8;
+
+}
+.mainbar_search_input {
+    padding-left: 25px;
+    font: inherit;
+    font-size: 14px;
+    background-color: inherit;
+    border-style: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mainbar_search_btn {
+    font: inherit;
+    display: none;
+}
+
 
