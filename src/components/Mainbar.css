@@ -32,19 +32,20 @@
     padding-left: 25px;
     font: inherit;
     font-size: 14px;
+    font-weight: 600;
     background-color: inherit;
     border-style: none;
     outline: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
 
 }
 ::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .mainbar_search_btn {
     font: inherit;
-    display: none;
+    /* display: none; */
 }
 
 

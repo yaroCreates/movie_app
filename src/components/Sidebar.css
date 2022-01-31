@@ -9,6 +9,8 @@
 .sidebar_header {
     background-color: #f83745;
     height: 5vh;
+    position: sticky;
+    top: 0;
 }
 
 .sidebar_logo {
