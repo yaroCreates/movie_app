@@ -4,6 +4,12 @@ import Mainbar from './components/Mainbar';
 import Sidebar from './components/Sidebar';
 
 
+const movie_api = 'https://api.themoviedb.org/3/movie/popular?api_key=3318862e9a9bdd5157c835306371af64'
+// const api_key = "3318862e9a9bdd5157c835306371af64"
+const w500Image = `https://image.tmdb.org/t/p/w500/`
+const search_api = ''
+
+
 function App() {
 
   const [movies, setMovies] = useState([])
@@ -12,25 +18,18 @@ function App() {
 
 
   useEffect(() => {
-    fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=${query}`, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "imdb8.p.rapidapi.com",
-        "x-rapidapi-key": "cf1db13756mshbe4505e0aab0a82p157db7jsnaa7941489db2"
-      }
-    })
+    fetch(movie_api)
       .then(response => response.json())
       .then(data => {
-        let dMovie = data.d
-        setMovies(dMovie)
+        setMovies(data.results)
       })
-      .catch(err => console.error(err))
+      .catch(err => console.log(err))
   }, [query])
 
   console.log(movies)
   return (
     <div className="container">
-      <Sidebar />
+      <Sidebar getQuery={(q) => setQuery(q)}/>
       <Mainbar items = {movies} getQuery={(q) => setQuery(q)}/>
 
     </div>

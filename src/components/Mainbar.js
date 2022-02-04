@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 function Mainbar({ items, getQuery }) {
 
-    const [text, setText] = useState('school')
+    const [text, setText] = useState('')
 
     const onClick =() => {
         let a = text
