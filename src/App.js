@@ -6,7 +6,6 @@ import Sidebar from './components/Sidebar';
 
 const movie_api = 'https://api.themoviedb.org/3/movie/popular?api_key=3318862e9a9bdd5157c835306371af64'
 // const api_key = "3318862e9a9bdd5157c835306371af64"
-const w500Image = `https://image.tmdb.org/t/p/w500/`
 const search_api = ''
 
 
