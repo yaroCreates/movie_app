@@ -10,10 +10,10 @@ const Moviecard = ( { item }) => {
     return (
         <div className='movie_card' >
             <img className='movie_card_img' src={originalImage + item.poster_path} alt={item.title}/>
-            {/* <h2 className='movie_card_name'>{item.l}</h2>
-            <h4 className='movie_card_type'>{item.q}</h4>
-            <h5 className='movie_card_year'>{item.yr}</h5>
-            <p className='movie_card_actors'>{item.s}</p> */}
+            <h2 className='movie_card_name'>{item.title}</h2>
+            <h4 className='movie_card_rating'>{item.vote_average}</h4>
+            <h5 className='movie_card_year'>{item.release_date}</h5>
+            {/* <p className='movie_card_overview'>{item.overview}</p> */}
             
 
         </div>

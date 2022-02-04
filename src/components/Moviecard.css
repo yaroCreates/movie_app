@@ -18,18 +18,25 @@
     font-weight: 600;
 }
 
-.movie_card_type,
+.movie_card_rating,
 .movie_card_year,
-.movie_card_actors {
+.movie_card_overview {
     color: #81a2b8;
     font-weight: 400;
     font-size: 12px;
 }
 
-.movie_card_type {
+.movie_card_rating {
     font-weight: 600 !important;
     color: #ffb10a;
 }
+
+/* .movie_card_overview {
+    width: 200px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+} */
 
 
 
