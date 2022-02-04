@@ -16,6 +16,7 @@
 .movie_card_name {
     font-size: 16px;
     font-weight: 600;
+    width: 200px;
 }
 
 .movie_card_rating,

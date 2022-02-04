@@ -3,14 +3,7 @@ import './Mainbar.css'
 import Moviecard from './Moviecard';
 import SearchIcon from '@material-ui/icons/Search';
 
-function Mainbar({ items, getQuery }) {
-
-    const [text, setText] = useState('')
-
-    const onClick =() => {
-        let a = text
-        getQuery(a)
-    }
+function Mainbar({ items, handleChange, handleSubmit, searchValue }) {
 
     return (
         <div className='mainbar'>
@@ -20,12 +13,12 @@ function Mainbar({ items, getQuery }) {
                     <input
                         className='mainbar_search_input'
                         placeholder='Search movies'
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
+                        value={searchValue}
+                        onChange={handleChange}
                     />
                     <button
                         className='mainbar_search_btn'
-                        onClick={() => onClick()}
+                        onClick={handleSubmit}
                     >
                         Search
                     </button>
