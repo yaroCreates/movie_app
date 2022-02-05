@@ -14,10 +14,10 @@ function Sidebar( {getQuery}) {
                 <h1 className='sidebar_logo'>MovieApp</h1>
             </div>
             <div className='sidebar_links'>
-                <a href='#' className='sidebar_link active'>All Movies</a>
-                <a href='#' className='sidebar_link' onClick={() => onClick()}>TV Series</a>
-                <a href='#' className='sidebar_link'>Favourites</a>
-                <a href='#' className='sidebar_link'>Watch Later</a>
+                <a href='#' className='sidebar_link active'>Popular Movies</a>
+                <a href='#' className='sidebar_link'>Trending</a>
+                <a href='#' className='sidebar_link'>Top Rated</a>
+                <a href='#' className='sidebar_link'>TV Shows</a>
             </div>
         </div>
 
