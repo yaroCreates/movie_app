@@ -39,6 +39,11 @@
     background-color: #222b31;
 
 }
+a:active {
+    background-color: #222b31;
+    color: #f83745;
+}
+
 .active {
     background-color: #222b31;
     color: #f83745;
