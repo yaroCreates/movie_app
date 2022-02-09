@@ -7,6 +7,8 @@ import Sidebar from './components/Sidebar';
 const movie_api = 'https://api.themoviedb.org/3/movie/popular?api_key=3318862e9a9bdd5157c835306371af64'
 const search_api = 'https://api.themoviedb.org/3/search/movie/?api_key=3318862e9a9bdd5157c835306371af64&query='
 const trending_api = 'https://api.themoviedb.org/3/trending/all/day?api_key=3318862e9a9bdd5157c835306371af64'
+const top_rated = 'https://api.themoviedb.org/3/movie/top_rated?api_key=3318862e9a9bdd5157c835306371af64'
+const tv_api = 'https://api.themoviedb.org/3/tv/popular?api_key=3318862e9a9bdd5157c835306371af64'
 // const api_key = "3318862e9a9bdd5157c835306371af64"
 
 
@@ -57,6 +59,45 @@ function App() {
 
   }
 
+  const handlePopular = (e) => {
+    e.preventDefault()
+    fetch(movie_api)
+      .then(response => response.json())
+      .then(data => {
+        setMovies(data.results)
+      })
+      .catch(err => console.log(err))
+
+    setSearchValue('')
+
+  }
+
+  const handleTopRated = (e) => {
+    e.preventDefault()
+    fetch(top_rated)
+      .then(response => response.json())
+      .then(data => {
+        setMovies(data.results)
+      })
+      .catch(err => console.log(err))
+
+    setSearchValue('')
+
+  }
+
+  const handleTvShow = (e) => {
+    e.preventDefault()
+    fetch(tv_api)
+      .then(response => response.json())
+      .then(data => {
+        setMovies(data.results)
+      })
+      .catch(err => console.log(err))
+
+    setSearchValue('')
+
+  }
+
   const handleOnChange = (e) => {
     setSearchValue(e.target.value)
   }
@@ -64,7 +105,7 @@ function App() {
   console.log(movies)
   return (
     <div className="container">
-      <Sidebar trending={handleTrending}/>
+      <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow}/>
       <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange= {handleOnChange} searchValue={searchValue} />
 
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Sidebar.css'
 
-function Sidebar({ trending }) {
+function Sidebar({ trending, popular, top_rated, tv_show }) {
 
     useEffect(() => {
         var btns = document.querySelectorAll(".sidebar_link");
@@ -22,10 +22,10 @@ function Sidebar({ trending }) {
                 <h1 className='sidebar_logo'>MovieApp</h1>
             </div>
             <div id="sidebar_ID" className='sidebar_links'>
-                <a href='#' className='sidebar_link active'>Popular Movies</a>
+                <a onClick={popular} className='sidebar_link active'>Popular Movies</a>
                 <a onClick={trending} className='sidebar_link'>Trending</a>
-                <a href='#' className='sidebar_link'>Top Rated</a>
-                <a href='#' className='sidebar_link'>TV Shows</a>
+                <a onClick={top_rated} className='sidebar_link'>Top Rated</a>
+                <a onClick={tv_show} className='sidebar_link'>TV Shows</a>
             </div>
         </div>
 

@@ -33,6 +33,7 @@
     font-weight: 600;
     font-size: 14px;
     padding: 20px 0 20px 30px;
+    cursor: pointer;
 }
 
 .sidebar_link:hover {
