@@ -1,7 +1,9 @@
 import react, { useEffect, useState } from 'react';
+import { BrowserRouter, Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Mainbar from './components/Mainbar';
 import Sidebar from './components/Sidebar';
+import Moviedetail from './components/Moviedetail';
 
 
 const movie_api = 'https://api.themoviedb.org/3/movie/popular?api_key=3318862e9a9bdd5157c835306371af64'
@@ -33,16 +35,16 @@ function App() {
 
     if (searchValue) {
       fetch(search_api + searchValue)
-      .then(response => response.json())
-      .then(data => {
-        setMovies(data.results)
-      })
-      .catch(err => console.log(err))
+        .then(response => response.json())
+        .then(data => {
+          setMovies(data.results)
+        })
+        .catch(err => console.log(err))
 
-    setSearchValue('')
+      setSearchValue('')
     }
 
-    
+
 
   }
 
@@ -105,8 +107,18 @@ function App() {
   console.log(movies)
   return (
     <div className="container">
-      <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow}/>
-      <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange= {handleOnChange} searchValue={searchValue} />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow} />
+            <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange={handleOnChange} searchValue={searchValue} />
+          </Route>
+          <Route path="/movie-detail/">
+            <Moviedetail />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+
 
     </div>
   );

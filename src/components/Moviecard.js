@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './Moviecard.css'
 
 
@@ -9,6 +10,7 @@ const Moviecard = ( { item }) => {
 
     return (
         <div className='movie_card' >
+            <Link to='/movie-detail'></Link>
             <img className='movie_card_img' src={originalImage + item.poster_path} alt={item.title}/>
             <h2 className='movie_card_name'>{item.title}</h2>
             <h2 className='movie_card_name'>{item.name}</h2>
