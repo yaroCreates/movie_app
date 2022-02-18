@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from 'react';
 import { BrowserRouter, Router, Route, Switch } from 'react-router-dom'
+import axios from 'axios'
 import './App.css';
 import Mainbar from './components/Mainbar';
 import Sidebar from './components/Sidebar';
@@ -11,7 +12,9 @@ const search_api = 'https://api.themoviedb.org/3/search/movie/?api_key=3318862e9
 const trending_api = 'https://api.themoviedb.org/3/trending/all/day?api_key=3318862e9a9bdd5157c835306371af64'
 const top_rated = 'https://api.themoviedb.org/3/movie/top_rated?api_key=3318862e9a9bdd5157c835306371af64'
 const tv_api = 'https://api.themoviedb.org/3/tv/popular?api_key=3318862e9a9bdd5157c835306371af64'
-// const api_key = "3318862e9a9bdd5157c835306371af64"
+
+const movieUrl = 'https://api.themoviedb.org/3/movie/'
+const key = "api_key=3318862e9a9bdd5157c835306371af64"
 
 
 function App() {
@@ -104,6 +107,16 @@ function App() {
     setSearchValue(e.target.value)
   }
 
+  // const handleMovieDetails = (id) => {
+  //   fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=3318862e9a9bdd5157c835306371af64`)
+  //     .then(response => response.json())
+  //     .then(data => (data.results))
+  //     .catch(err => console.log(err))
+
+  // }
+
+ 
+
   console.log(movies)
   return (
     <div className="container">
@@ -113,7 +126,7 @@ function App() {
             <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow} />
             <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange={handleOnChange} searchValue={searchValue} />
           </Route>
-          <Route path="/movie-detail/">
+          <Route path="/movie/:id" >
             <Moviedetail />
           </Route>
         </Switch>
