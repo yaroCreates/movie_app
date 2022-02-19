@@ -27,6 +27,7 @@ function Moviedetail() {
             <div className='backdrop_container' style={{backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url(${originalImage}${movieDetails.backdrop_path})`}}>
                 <div className='details_section'>
                     <div className='poster_img'  style={{backgroundImage: `url(${originalImage}${movieDetails.poster_path})`}}></div>
+                    <div className='details'></div>
                 </div>
             </div>
         </div>
