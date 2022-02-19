@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Moviecard.css'
 
 
-const originalImage = `https://image.tmdb.org/t/p/original/`
+const originalImage = `https://image.tmdb.org/t/p/original`
 const w500Image = `https://image.tmdb.org/t/p/w500/`
 
 const Moviecard = ({ item }) => {

@@ -3,7 +3,7 @@ import './Moviedetail.css'
 import { useParams } from 'react-router-dom';
 
 
-const originalImage = `https://image.tmdb.org/t/p/original/`
+const originalImage = `https://image.tmdb.org/t/p/original`
 const w500Image = `https://image.tmdb.org/t/p/w500/`
 
 function Moviedetail() {
@@ -17,15 +17,18 @@ function Moviedetail() {
             .then(response => response.json())
             .then(data => {
                 setMovieDetails(data)
-                console.log(movieDetails)
             })
             .catch(err => console.log(err))
 
     }, [])
+
     return (
-        <div className='movie_detail_container'>
-            {/* <img scr={originalImage + movieDetails.poster_path}/> */}
-            <h1>{id}</h1>
+        <div className='movie_detail_container' >
+            <div className='backdrop_container' style={{backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url(${originalImage}${movieDetails.backdrop_path})`}}>
+                <div className='details_section'>
+                    <div className='poster_img'  style={{backgroundImage: `url(${originalImage}${movieDetails.poster_path})`}}></div>
+                </div>
+            </div>
         </div>
     );
 }
