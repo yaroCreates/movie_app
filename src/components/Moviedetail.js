@@ -31,8 +31,8 @@ function Moviedetail() {
                         <h1 className='movieDetails_title'>{movieDetails.title}</h1>
                         <div className='movieDetails_genre'>
                             {
-                                movieDetails.genres && movieDetails.genres.map((genre) => (
-                                    <span>{genre.name}</span>
+                                movieDetails.genres && movieDetails.genres.map((genre, i) => (
+                                    <span key={i}>{genre.name}</span>
                                 ))
                             }
                         </div>
