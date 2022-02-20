@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Moviedetail.css'
 import { useParams } from 'react-router-dom';
+import Castlist from './Castlist';
 
 
 const originalImage = `https://image.tmdb.org/t/p/original`
@@ -37,6 +38,9 @@ function Moviedetail() {
                             }
                         </div>
                         <p className='movieDetails_overview'>{movieDetails.overview}</p>
+                        <div>
+                            <Castlist id={movieDetails.id}/>
+                        </div>
                     </div>
                 </div>
             </div>

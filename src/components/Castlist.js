@@ -5,10 +5,9 @@ import { useParams } from 'react-router-dom';
 const originalImage = `https://image.tmdb.org/t/p/original`
 const w500Image = `https://image.tmdb.org/t/p/w500/`
 
-function Castlist() {
-    const { id } = useParams()
+function Castlist( { id }) {
     const [ castList, setCastList] = useState([])
-    // console.log(castList)
+    console.log(castList)
 
 
     useEffect(() => {
