@@ -28,6 +28,9 @@ function Moviedetail() {
             <div className='backdrop_container' style={{backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url(${originalImage}${movieDetails.backdrop_path})`}}>
                 <div className='details_section'>
                     <div className='poster_img'  style={{backgroundImage: `url(${originalImage}${movieDetails.poster_path})`}}></div>
+                    <div className='rating_body'>
+                        <h2 className='rating'>{movieDetails.vote_average}</h2>
+                    </div>
                     <div className='details'>
                         <h1 className='movieDetails_title'>{movieDetails.title}</h1>
                         <div className='movieDetails_genre'>
@@ -38,6 +41,9 @@ function Moviedetail() {
                             }
                         </div>
                         <p className='movieDetails_overview'>{movieDetails.overview}</p>
+                        <div className='castlist_header'>
+                            <h2 className='castlist_header_name'>Casts</h2>
+                        </div>
                         <div>
                             <Castlist id={movieDetails.id}/>
                         </div>
