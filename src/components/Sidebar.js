@@ -19,7 +19,7 @@ function Sidebar({ trending, popular, top_rated, tv_show }) {
     return (
         <div className='sidebar'>
             <div className='sidebar_header'>
-                <h1 className='sidebar_logo'>MovieApp</h1>
+                <h1 onClick={popular} className='sidebar_logo'>MovieApp</h1>
             </div>
             <div id="sidebar_ID" className='sidebar_links'>
                 <a onClick={popular} className='sidebar_link active'>Popular Movies</a>

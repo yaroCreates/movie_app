@@ -1,6 +1,5 @@
 .mainbar {
 
-    width: 85%;
 }
 .movie {
     display: grid;
@@ -49,3 +48,51 @@
 }
 
 
+@media (max-width: 1170px) {
+    .movie {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    
+    
+
+}
+
+
+@media (max-width: 975px) {
+    .movie {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 40px;
+        
+    }
+    .mainbar {
+        width: 85%;
+    } 
+}
+
+@media (max-width: 750px) {
+    .movie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 20px;
+    } 
+    .mainbar {
+        flex: 1;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .movie {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 20px;
+    } 
+    .mainbar {
+        flex: 1;
+        margin: 0 auto;
+    }
+    
+}

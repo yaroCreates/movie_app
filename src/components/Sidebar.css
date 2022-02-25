@@ -1,5 +1,4 @@
 .sidebar {
-    width: 15%;
     height: 100vh;
     position: sticky;
     top: 0;
@@ -14,7 +13,7 @@
 }
 
 .sidebar_logo {
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
     padding-top: 10px;
@@ -31,7 +30,7 @@
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: .9rem;
     padding: 20px 0 20px 30px;
     cursor: pointer;
 }
@@ -48,4 +47,35 @@ a:active {
 .active {
     background-color: #222b31;
     color: #f83745;
+}
+
+@media (max-width: 1170px) {
+
+    .sidebar {
+        width: 15%;
+    }
+    
+    .sidebar_link {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media (max-width: 975px) {
+    .movie {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }  
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        display: none;
+        
+    } 
+    .sidebar_link {
+        font-size: 0.7rem;
+    }
 }

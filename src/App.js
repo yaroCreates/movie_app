@@ -115,23 +115,24 @@ function App() {
 
   // }
 
- 
+
 
   console.log(movies)
   return (
-    <div className="container">
+    <div className='app'>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow} />
-            <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange={handleOnChange} searchValue={searchValue} />
+            <div className='container'>
+              <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow} />
+              <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange={handleOnChange} searchValue={searchValue} />
+            </div>
           </Route>
           <Route path="/movie/:id" >
             <Moviedetail />
           </Route>
         </Switch>
       </BrowserRouter>
-
 
     </div>
   );
