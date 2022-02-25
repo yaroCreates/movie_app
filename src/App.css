@@ -20,16 +20,32 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  /* display: flex; */
   display:  grid;
   grid-template-columns: 12rem auto;
 
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 1200px) {
   .container {
-    display: flex;
+    width: 100%;
+    grid-template-columns: 6rem auto;
   }
 
+  
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 0 auto;
+  }
+
+  
+}
+@media screen and (max-width: 750px) {
+  .container {
+      width: 100%;
+      grid-template-columns: 0 1fr;
+  } 
   
 }

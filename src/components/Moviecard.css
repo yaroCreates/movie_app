@@ -32,16 +32,6 @@
     color: #ffb10a;
 }
 
-@media (max-width: 975px) {
-    .movie_card_img {
-        width: fit-content;
-        height: 350px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        padding: 5px;
-        
-    }  
-}
 
 
 
