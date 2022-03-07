@@ -4,6 +4,11 @@
     top: 0;
     background-color: #191c1f;
 }
+.sidebar_class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 .sidebar_header {
     background-color: #f83745;
@@ -35,7 +40,7 @@
     cursor: pointer;
 }
 
-.sidebar_link:hover {
+.sidebar_class:hover {
     background-color: #222b31;
 
 }
@@ -49,3 +54,11 @@ a:active {
     color: #f83745;
 }
 
+@media (max-width: 1200px) {
+    .sidebar_links {
+        display: none;
+    }
+    
+    
+
+}
