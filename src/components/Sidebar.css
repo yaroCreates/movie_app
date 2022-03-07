@@ -4,10 +4,15 @@
     top: 0;
     background-color: #191c1f;
 }
-.sidebar_class {
+
+
+a {
     display: flex;
-    flex-direction: row;
     align-items: center;
+} 
+
+.sidebar_icon {
+    margin-right: 10px;
 }
 
 .sidebar_header {
@@ -35,24 +40,26 @@
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .7rem;
     padding: 20px 0 20px 30px;
     cursor: pointer;
 }
 
-.sidebar_class:hover {
+a:hover {
     background-color: #222b31;
 
 }
-a:active {
+/* a:active {
     background-color: #222b31;
     color: #f83745;
-}
+} */
 
 .active {
     background-color: #222b31;
     color: #f83745;
 }
+
+
 
 @media (max-width: 1200px) {
     .sidebar_links {

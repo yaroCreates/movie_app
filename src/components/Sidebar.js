@@ -27,22 +27,22 @@ function Sidebar({ trending, popular, top_rated, tv_show }) {
                 <h1 onClick={popular} className='sidebar_logo'>MovieApp</h1>
             </div>
             <div id="sidebar_ID" className='sidebar_links'>
-                <div className='sidebar_class'>
-                    <a onClick={popular} className='sidebar_link active'>Popular Movies</a>
-                    < LocalMoviesOutlined fontSize='small'/>
-                </div>
-                <div className='sidebar_class'>
-                    <a onClick={trending} className='sidebar_link'>Trending</a>
-                    <  WhatshotOutlined fontSize='small'/>
-                </div>
-                <div className='sidebar_class'>
-                    <a onClick={top_rated} className='sidebar_link'>Top Rated</a>
-                    < RateReviewOutlined fontSize='small'/>
-                </div>
-                <div className='sidebar_class'>
-                    <a onClick={tv_show} className='sidebar_link'>TV Shows</a>
-                    < LiveTvOutlined fontSize='small'/>
-                </div>
+                <a onClick={popular} className='sidebar_link active'>
+                    < LocalMoviesOutlined className='sidebar_icon' fontSize='small' />
+                    <h3>Popular Movies</h3>
+                </a>
+                <a onClick={trending} className='sidebar_link'>
+                    < WhatshotOutlined className='sidebar_icon' fontSize='small' />
+                    <h3>Trending</h3>
+                </a>
+                <a onClick={top_rated} className='sidebar_link'>
+                    < RateReviewOutlined className='sidebar_icon' fontSize='small' />
+                    <h3>Top Rated</h3>
+                </a>
+                <a onClick={tv_show} className='sidebar_link'>
+                    < LiveTvOutlined className='sidebar_icon' fontSize='small' />
+                    <h3>TV Shows</h3>
+                </a>
             </div>
         </div>
 
