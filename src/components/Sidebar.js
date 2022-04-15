@@ -4,27 +4,53 @@ import './Sidebar.css'
 // import LocalMoviesIcon from '@material-ui/icons/LocalMovies';
 
 
-import { LocalMoviesOutlined, RateReviewOutlined, WhatshotOutlined, LiveTvOutlined } from '@material-ui/icons'
+import { LocalMoviesOutlined, RateReviewOutlined, WhatshotOutlined, LiveTvOutlined, MenuOutlined, CloseOutlined } from '@material-ui/icons'
 
 function Sidebar({ trending, popular, top_rated, tv_show }) {
 
     useEffect(() => {
         var btns = document.querySelectorAll(".sidebar_link");
+
         btns.forEach(item => {
             item.addEventListener("click", () => {
                 var selected = document.getElementsByClassName("active");
                 selected[0].className = selected[0].className.replace(" active", "");
                 item.className += " active";
             });
-        });
+        })
+
     }, [])
+
+    // useEffect(() => {
+    //     document.onclick = (e) => {
+    //         let xyz = document.querySelector('.sidebar')
+    //         if (xyz.style.display === 'block' && e.target.id !== 'sidebar') {
+    //             xyz.style.display = 'none'
+    //         }
+    //     }
+    // }, [])
+
+    const reset = () => {
+        let xyz = document.querySelector('.sidebar')
+        console.log(xyz)
+        xyz.style.display = ''
+    }
+
+    const hideMenu = () => {
+        let xyz = document.querySelector('.sidebar')
+        console.log(xyz)
+        xyz.style.display = 'none'
+        reset()
+    }
+
 
 
 
     return (
-        <div className='sidebar'>
+        <div id='sidebar' className='sidebar'>
             <div className='sidebar_header'>
-                <h1 onClick={popular} className='sidebar_logo'>MovieApp</h1>
+                <h3 className='sidebar_logo'>MovieApp</h3>
+                < CloseOutlined className='sidebar_close' onClick={hideMenu} />
             </div>
             <div id="sidebar_ID" className='sidebar_links'>
                 <a onClick={popular} className='sidebar_link active'>

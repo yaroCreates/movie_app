@@ -5,6 +5,7 @@ import './App.css';
 import Mainbar from './components/Mainbar';
 import Sidebar from './components/Sidebar';
 import Moviedetail from './components/Moviedetail';
+import Header from './components/Header'
 
 
 const movie_api = 'https://api.themoviedb.org/3/movie/popular?api_key=3318862e9a9bdd5157c835306371af64'
@@ -105,6 +106,7 @@ function App() {
 
   const handleOnChange = (e) => {
     setSearchValue(e.target.value)
+    console.log(searchValue)
   }
 
   // const handleMovieDetails = (id) => {
@@ -124,6 +126,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <div className='container'>
+              <Header popular={handlePopular} searchValue={searchValue} handleSubmit={handleOnSubmit} handleChange={handleOnChange} />
               <Sidebar trending={handleTrending} popular={handlePopular} top_rated={handleTopRated} tv_show={handleTvShow} />
               <Mainbar items={movies} handleSubmit={handleOnSubmit} handleChange={handleOnChange} searchValue={searchValue} />
             </div>

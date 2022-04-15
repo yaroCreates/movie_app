@@ -37,7 +37,7 @@ body {
 @media screen and (max-width: 970px) {
   .container {
     width: 100%;
-    grid-template-columns: 0 auto;
+    grid-template-columns: 6rem auto;
   }
 
   
@@ -45,7 +45,24 @@ body {
 @media screen and (max-width: 750px) {
   .container {
       width: 100%;
-      grid-template-columns: 0 1fr;
+      grid-template-columns: 0 auto;
+      display: flex;
   } 
   
 }
+@media screen and (max-width: 550px) {
+  .container {
+      width: 100%;
+      grid-template-columns:0 1fr;
+  } 
+  
+}
+@media screen and (max-width: 450px) {
+  .container {
+      width: 100%;
+      grid-template-columns:0 1fr;
+      display: block;
+  } 
+  
+}
+
