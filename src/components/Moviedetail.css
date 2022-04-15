@@ -97,5 +97,12 @@
         margin-left: 5px;
         margin-top: 100px;
     }
+    .movieDetails_genre {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .movieDetails_genre span {
+        margin-bottom: 5px;
+    }
     
 }
