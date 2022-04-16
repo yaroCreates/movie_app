@@ -34,6 +34,21 @@ function App() {
       .catch(err => console.log(err))
   }, [])
 
+
+  const reset = () => {
+    let xyz = document.querySelector('.sidebar')
+    console.log(xyz)
+    xyz.style.display = ''
+  }
+
+  const hideMenu = () => {
+    let xyz = document.querySelector('.sidebar')
+    console.log(xyz)
+    xyz.style.display = 'none'
+    reset()
+  }
+
+
   const handleOnSubmit = (e) => {
     e.preventDefault()
 
@@ -62,6 +77,9 @@ function App() {
       .catch(err => console.log(err))
 
     setSearchValue('')
+    hideMenu()
+
+
 
   }
 
@@ -75,6 +93,7 @@ function App() {
       .catch(err => console.log(err))
 
     setSearchValue('')
+    hideMenu()
 
   }
 
@@ -88,6 +107,7 @@ function App() {
       .catch(err => console.log(err))
 
     setSearchValue('')
+    hideMenu()
 
   }
 
@@ -101,6 +121,7 @@ function App() {
       .catch(err => console.log(err))
 
     setSearchValue('')
+    hideMenu()
 
   }
 

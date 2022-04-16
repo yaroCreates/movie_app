@@ -43,6 +43,8 @@ function Sidebar({ trending, popular, top_rated, tv_show }) {
         reset()
     }
 
+    
+
 
 
 
@@ -53,7 +55,7 @@ function Sidebar({ trending, popular, top_rated, tv_show }) {
                 < CloseOutlined className='sidebar_close' onClick={hideMenu} />
             </div>
             <div id="sidebar_ID" className='sidebar_links'>
-                <a onClick={popular} className='sidebar_link active'>
+                <a onClick= {popular} className='sidebar_link active'>
                     < LocalMoviesOutlined className='sidebar_icon' fontSize='small' />
                     <h3>Popular Movies</h3>
                 </a>
