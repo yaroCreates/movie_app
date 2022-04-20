@@ -85,9 +85,7 @@ a:hover {
     .sidebar_logo {
         font-size: 0.8rem;
     }
-    .sidebar_links {
-        /* display: none; */
-    }
+    
     .sidebar {
         display: block;
     }
